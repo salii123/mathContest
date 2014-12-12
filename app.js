@@ -8,12 +8,14 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var http = require('http');
+
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
+app.set('port', process.env.PORT || 3000);
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
@@ -46,6 +48,10 @@ if (app.get('env') === 'development') {
     });
 }
 
+app.get('/', function (req, res) {
+    res.send('hello world');
+});
+
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
@@ -58,3 +64,7 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+http.createServer(app).listen(app.get('port'), function () {
+    console.log("Express server listening on port " + app.get('port'));
+});
