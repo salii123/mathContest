@@ -1,0 +1,73 @@
+.test-bg {
+  background: rgba(255, 255, 255, 0);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background: -ms-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-color: #eff0f3;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+body {
+  background-color: #eff0f3;
+}
+
+.header {
+  background: #2c3742;
+  box-shadow: inset rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(0, 0, 0, 0.22) 0 -1px 0, rgba(0, 0, 0, 0.14) 0 1px 2px;
+  width: 100%;
+  height: 75px;
+  text-align: center;
+  padding-top: 28px;
+}
+.header .logo {
+  font-size:35px;
+  color:#FFFFFF;
+  margin-bottom: 45px;
+  position: relative;
+  left: -2px;
+}
+
+.login-wrapper .left{
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.login-wrapper .right{
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.login-wrapper .left {
+  width: 82%;
+  margin: 0 auto;
+}
+.login-wrapper .right {
+  width: 82%;
+  margin: 0 auto;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+  .body .col-md-4 {
+    width: 350px;
+  }
+  @media (max-width: 767px) {
+  .body .col-md-8 {
+    width: 350px;
+  }
+
+  .login-wrapper .box .action {
+    margin: 0px -31px;
+  }
+}
+@media (max-width: 480px) {
+  .body .col-md-8 {
+    width: 90%;
+  }
+}

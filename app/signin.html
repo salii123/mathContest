@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html class="login-bg" ng-app>
+<head>
+	<title>在线数学竞赛平台</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet">
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="css/compiled/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/compiled/elements.css">
+    <link rel="stylesheet" href="css/compiled/signin.css" type="text/css" media="screen" />
+</head>
+<body>
+    <!-- background switcher -->
+    <div class="bg-switch visible-desktop">
+        <div class="bgs">
+            <a href="#" data-img="landscape.jpg" class="bg active">
+                <img src="img/bgs/landscape.jpg" />
+            </a>
+            <a href="#" data-img="blueish.jpg" class="bg">
+                <img src="img/bgs/blueish.jpg" />
+            </a>            
+            <a href="#" data-img="7.jpg" class="bg">
+                <img src="img/bgs/7.jpg" />
+            </a>
+            <a href="#" data-img="8.jpg" class="bg">
+                <img src="img/bgs/8.jpg" />
+            </a>
+            <a href="#" data-img="9.jpg" class="bg">
+                <img src="img/bgs/9.jpg" />
+            </a>
+            <a href="#" data-img="10.jpg" class="bg">
+                <img src="img/bgs/10.jpg" />
+            </a>
+            <a href="#" data-img="11.jpg" class="bg">
+                <img src="img/bgs/11.jpg" />
+            </a>
+        </div>
+    </div>
+
+
+    <div class="login-wrapper"> 
+			<p class="logo">在线数学竞赛平台</p>
+
+        <div class="box">
+            <div class="content-wrap" ng-controller="UserLogin">
+                <h6>登录</h6>
+                <input ng-model="name" class="form-control" type="text" placeholder="用户名" required>
+                <input ng-model="password"  class="form-control" type="password" placeholder="密码" required>
+				<p></p>
+                <button class="btn-glow primary login" ng-click="login()" ng-disabled="form.$invalid" type="submit()" value="Login">登录</button>
+            </div>
+        </div>
+
+        <div class="no-account">
+            <p>还没账号?</p>
+            <a href="signup.html">注册</a>
+        </div>
+    </div>
+
+	<!-- scripts -->
+    <script src="js/jquery-latest.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="sigin.js"></script>
+
+    <!-- pre load bg imgs -->
+    <script type="text/javascript">
+        $(function () {
+            // bg switcher
+            var $btns = $(".bg-switch .bg");
+            $btns.click(function (e) {
+                e.preventDefault();
+                $btns.removeClass("active");
+                $(this).addClass("active");
+                var bg = $(this).data("img");
+
+                $("html").css("background-image", "url('img/bgs/" + bg + "')");
+            });
+
+        });
+    </script>
+</body>
+</html>
