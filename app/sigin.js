@@ -1,5 +1,5 @@
 
-app.controller("UserInfoCtrl",function($scope,$http){
+app.controller("UserLogin",function($scope,$http){
 	$scope.entity={
 		name:'',
 		password:''
