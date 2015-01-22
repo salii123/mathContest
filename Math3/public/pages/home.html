@@ -1,0 +1,18 @@
+
+<div class="home" align="center" valign="center">
+  <h2>  欢迎来到在线数学比赛系统</h2>
+  <h3>  请注册用户名</h3>
+<div class="col-md-4"></div>
+<div class="col-md-4">
+
+   <div class="text1" id="login" ng-controller="MainController">
+    <form  class="form-group" ng-submit="userLogin()" name="loginFm" >
+        <input required=""  ng-model="login.name" class="form-control" name="name" id="inputName" ng-minlength="3" ng-maxlength="16" placeholder="用户名为3-16位" />
+		 <span ng-show="loginFm.name.$dirty&&loginFm.name.$invalid">用户名至少3位</span><br /> 
+		 <p></p>
+		 <button type="submit" class="btn btn-primary">登录</button>
+
+    </form>
+</div>
+</div>
+

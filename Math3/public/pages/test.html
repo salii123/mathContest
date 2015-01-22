@@ -1,0 +1,45 @@
+<div class="container" >
+    <div class="col-md-3">
+    <table class="table table-striped table-bordered">
+     <tr>
+       <th style=" text-align:center">姓名</th>
+       <th style=" text-align:center">得分</th>
+     </tr>
+
+     <tr ng-repeat="user in users|orderBy:'-score'">
+       <td style=" text-align:center">{{user.name}}</td>
+       <td style=" text-align:center">{{user.score}}</td>
+     </tr>
+  
+    </table>
+    </div>
+         
+	 <form ng-submit="userSubmitAns()" >		
+	    <div class="col-md-8"  >
+		   <div class="title">
+		     <h3>请看下面的题目，快速抢答。</h3>
+		   </div>
+
+		   <div class="|">
+		      <hr></hr>
+			 
+		   </div>
+		   <div>
+		     <h4>填空题</h4>
+		   </div>
+
+		   <div class="textarea">
+		        <textarea class="form-control" rows="3">{{uesrQuestions}}</textarea>
+		   </div>
+		   
+		    <div class="form-group" id="name" >
+                 <input class="form-control" type="text"  placeholder="输入答案" ng-model="userAns">
+            </div>
+            <p>{{userAnswerStatus}}</p>
+            <div >
+		     <input type="submit" class="btn btn-primary" value="提交"/>
+		   </div>
+		  </form>
+
+    </div>
+    </div>
